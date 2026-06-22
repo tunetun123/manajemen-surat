@@ -9,4 +9,18 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateDocument extends CreateRecord
 {
     protected static string $resource = DocumentResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl("index");
+    }
+
+    protected function getCreateFormAction(): \Filament\Actions\Action
+    {
+        return parent::getCreateFormAction()
+            ->requiresConfirmation()
+            ->modalHeading("Konfirmasi Simpan")
+            ->modalDescription("Apakah Anda yakin ingin menyimpan data ini?")
+            ->modalSubmitActionLabel("Ya, Simpan");
+    }
 }

@@ -19,6 +19,7 @@ class CategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'fas-folder';
     protected static ?string $modelLabel = 'Kategori';
+    protected static ?string $pluralModelLabel = 'Kategori';
 
     public static function form(Form $form): Form
     {

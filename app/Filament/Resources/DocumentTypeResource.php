@@ -19,6 +19,7 @@ class DocumentTypeResource extends Resource
 
     protected static ?string $navigationIcon = 'fas-file-alt';
     protected static ?string $modelLabel = 'Jenis Dokumen';
+    protected static ?string $pluralModelLabel = 'Jenis Dokumen';
 
     public static function form(Form $form): Form
     {

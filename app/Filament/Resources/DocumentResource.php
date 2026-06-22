@@ -19,6 +19,7 @@ class DocumentResource extends Resource
 
     protected static ?string $navigationIcon = 'fas-file-contract';
     protected static ?string $modelLabel = 'Dokumen';
+    protected static ?string $pluralModelLabel = 'Dokumen';
 
     public static function form(Form $form): Form
     {
