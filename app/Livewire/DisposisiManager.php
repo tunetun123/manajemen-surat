@@ -80,7 +80,7 @@ class DisposisiManager extends Component
             'disposisis' => $query->paginate(10),
             'suratMasuks' => SuratMasuk::orderBy('tanggal_surat', 'desc')->get(),
             'users' => User::where('id', '!=', auth()->id())->orderBy('name')->get()
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Disposisi Surat');
     }
 
     public function create($suratId = null)

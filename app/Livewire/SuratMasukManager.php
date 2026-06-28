@@ -101,7 +101,7 @@ class SuratMasukManager extends Component
         return view('livewire.surat-masuk-manager', [
             'suratMasuks' => $query->paginate(10),
             'kategoris' => KategoriSurat::where('is_active', true)->orderBy('nama_kategori')->get()
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Daftar Surat Masuk');
     }
 
     public function create()

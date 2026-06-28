@@ -64,7 +64,7 @@ class UserManager extends Component
             'users' => $query->paginate(10),
             'roles' => Role::all(),
             'unitKerjas' => \App\Models\UnitKerja::where('is_active', true)->orderBy('nama_unit')->get()
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Pengguna');
     }
 
     public function create()
