@@ -34,7 +34,7 @@ class SettingManager extends Component
 
     public function render()
     {
-        return view('livewire.setting-manager')->layout('layouts.app');
+        return view('livewire.setting-manager')->layout('layouts.app')->title('Pengaturan');
     }
 
     public function save()

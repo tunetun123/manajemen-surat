@@ -58,7 +58,7 @@ class UnitKerjaManager extends Component
                 ->orderBy($this->sortField, $this->sortDirection)
                 ->paginate(10),
             'inactiveUnits' => UnitKerja::where('is_active', false)->orderBy('nama_unit')->get()
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Unit Kerja');
     }
 
     public function create()

@@ -23,6 +23,7 @@ class PermissionSeeder extends Seeder
             'Pengguna' => ['view', 'create', 'edit', 'delete'],
             'Hak Akses' => ['view', 'create', 'edit', 'delete'],
             'Pengaturan' => ['manage'],
+            'Dashboard' => ['view'],
         ];
 
         // Ensure super_admin role exists
@@ -32,7 +33,7 @@ class PermissionSeeder extends Seeder
             foreach ($actions as $action) {
                 // e.g. "view Dokumen", "create Dokumen", etc.
                 $permissionName = $action . ' ' . $module;
-                
+
                 $permission = Permission::firstOrCreate([
                     'name' => $permissionName,
                     'guard_name' => 'web'
