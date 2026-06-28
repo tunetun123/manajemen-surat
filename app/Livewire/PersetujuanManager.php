@@ -74,7 +74,7 @@ class PersetujuanManager extends Component
 
         return view('livewire.persetujuan-manager', [
             'suratKeluars' => $query->paginate(10)
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Persetujuan Surat');
     }
 
     public function openProcessModal($id)

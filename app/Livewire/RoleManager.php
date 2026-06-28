@@ -54,7 +54,7 @@ class RoleManager extends Component
                 ->orderBy($this->sortField, $this->sortDirection)
                 ->paginate(10),
             'allPermissions' => $allPermissions
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Hak Akses');
     }
 
     public function create()

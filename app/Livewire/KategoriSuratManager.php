@@ -60,7 +60,7 @@ class KategoriSuratManager extends Component
                 ->orderBy($this->sortField, $this->sortDirection)
                 ->paginate(10),
             'inactiveKategoris' => KategoriSurat::where('is_active', false)->orderBy('kode_kategori')->get()
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Kategori Surat');
     }
 
     public function create()

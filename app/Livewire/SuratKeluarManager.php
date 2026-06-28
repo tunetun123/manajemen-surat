@@ -105,7 +105,7 @@ class SuratKeluarManager extends Component
         return view('livewire.surat-keluar-manager', [
             'suratKeluars' => $query->paginate(10),
             'kategoris' => KategoriSurat::where('is_active', true)->orderBy('nama_kategori')->get()
-        ])->layout('layouts.app');
+        ])->layout('layouts.app')->title('Daftar Surat Keluar');
     }
 
     public function create()
